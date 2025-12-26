@@ -1,0 +1,15 @@
+/* src/components/tasks/TaskList.css */
+
+/* Empty state text */
+.text-gray-500 {
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .text-gray-500 {
+    color: #9ca3af;
+  }
+}

@@ -1,0 +1,123 @@
+/* =========================================
+   FULL PAGE BACKGROUND (override Tailwind)
+========================================= */
+
+.min-h-screen {
+  min-height: 100vh !important;
+}
+
+.bg-gradient-to-br,
+.from-indigo-500,
+.to-purple-600 {
+  background: linear-gradient(135deg, #4b3be0, #7c2ae8) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px !important;
+}
+
+/* =========================================
+   BIG CENTERED CURVED LOGIN BOX
+========================================= */
+
+.bg-white.rounded-lg.shadow-xl.p-8.w-full.max-w-md {
+  width: 100%;
+  max-width: 480px !important; /* bigger card */
+  background: #ffffff !important;
+  padding: 45px 40px !important;
+  border-radius: 28px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25) !important;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   TAB HEADER (Login | Register)
+========================================= */
+
+.flex.mb-6 {
+  display: flex !important;
+  margin-bottom: 28px !important;
+}
+
+.bg-indigo-600.text-white {
+  background: #5243dd !important;
+  padding: 12px 0 !important;
+  border-radius: 12px 0 0 12px !important;
+  font-weight: 600 !important;
+}
+
+.bg-gray-100.text-gray-700 {
+  background:#4c3fbf !important;
+  padding: 12px 0 !important;
+  border-radius: 0 12px 12px 0 !important;
+  font-weight: 600 !important;
+  transition: 0.3s ease;
+}
+
+.bg-gray-100.text-gray-700:hover {
+  background: #dedede !important;
+}
+
+/* =========================================
+   INPUT STYLING
+========================================= */
+
+.w-full.p-3,
+.w-full.p-3.pr-10 {
+  width: 100% !important;
+  padding: 14px !important;
+  border-radius: 14px !important;
+  font-size: 16px !important;
+  border: 2px solid #d4d4d4 !important;
+  background: #fafafa !important;
+  transition: 0.25s ease;
+}
+
+.w-full.p-3:focus,
+.w-full.p-3.pr-10:focus {
+  border-color: #4b3be0 !important;
+  box-shadow: 0 0 0 3px rgba(75, 59, 224, 0.25) !important;
+  outline: none !important;
+}
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.w-full.bg-indigo-600 {
+  background: #4b3be0 !important;
+  padding: 14px 0 !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  margin-top: 12px !important;
+  box-shadow: 0px 10px 25px rgba(75, 59, 224, 0.35) !important;
+  transition: 0.3s ease;
+}
+
+.w-full.bg-indigo-600:hover {
+  background: #3a2bcf !important;
+}
+
+/* =========================================
+   ERROR CARD SUPPORT
+========================================= */
+
+.error-card,
+.errorCard {
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+}

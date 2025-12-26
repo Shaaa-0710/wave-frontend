@@ -1,0 +1,35 @@
+/* Ensure full-height mobile view */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+}
+
+/* Optimize map for mobile */
+#map {
+  min-height: 50vh;
+}
+
+/* Mobile-friendly navigation */
+.navbar {
+  padding: 1rem;
+  min-height: 60px; /* At least 44px + padding */
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins */
+body {
+  margin: 0;
+  padding: 0;
+}

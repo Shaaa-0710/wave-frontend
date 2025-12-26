@@ -1,0 +1,137 @@
+/* Wrapper */
+.profile-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  color: #111;
+}
+
+/* ===== HEADER ===== */
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Avatar */
+.profile-avatar {
+  position: relative;
+}
+
+.profile-avatar img,
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Edit button */
+.edit-avatar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* Profile info */
+.profile-info {
+  flex: 1;
+}
+
+.username-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.username-row h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.settings-icon {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Stats */
+.profile-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.profile-stats div {
+  text-align: center;
+}
+
+.profile-stats strong {
+  font-size: 1.1rem;
+}
+
+.profile-stats span {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.profile-email {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* ===== SECTIONS ===== */
+.profile-section {
+  margin-top: 2rem;
+}
+
+.profile-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.task-card,
+.rating-card {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.task-card h4 {
+  font-weight: 600;
+}
+
+.rating-card span {
+  color: #f59e0b;
+}
+
+.muted {
+  color: #9ca3af;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-stats {
+    justify-content: center;
+  }
+}
