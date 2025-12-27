@@ -99,7 +99,7 @@ export default function TaskCard({ task, onDelete }) {
       {/* ✅ Fixed Task Image */}
       {task.image_url && (
         <div className="task-image-container">
-          <img src={`http://127.0.0.1:5000${task.image_url}`} alt="Task" />
+          <img src={`${process.env.REACT_APP_API_BASE_URL}${task.image_url}`} alt="Task" />
         </div>
       )}
       

@@ -40,6 +40,8 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     const res = await api.post('/api/auth/login', { email, password });
     const { token, user } = res.data;
+
+    localStorage.setItem('wave_token', token);
     setAuthToken(token);
     setCurrentUser(user);
     return user;
@@ -58,6 +60,7 @@ export const AuthProvider = ({ children }) => {
 };
 
   const logout = () => {
+    localStorage.removeItem('wave_token');
     setAuthToken(null);
     setCurrentUser(null);
   };

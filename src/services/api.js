@@ -1,28 +1,17 @@
-// src/services/api.js
 import axios from 'axios';
 
-const API_BASE_URL = 'https://wave-backend-upis.onrender.com/';
-
 const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: { 'Content-Type': 'application/json' },
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('wave_token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
-
+// ✅ attach token automatically
 export const setAuthToken = (token) => {
   if (token) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     localStorage.setItem('wave_token', token);
-    api.defaults.headers.Authorization = `Bearer ${token}`;
   } else {
+    delete api.defaults.headers.common['Authorization'];
     localStorage.removeItem('wave_token');
-    delete api.defaults.headers.Authorization;
   }
 };
 

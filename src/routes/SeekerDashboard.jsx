@@ -46,7 +46,7 @@ export default function SeekerDashboard() {
   if (loading) return <Loading />;
 
   const profilePic = currentUser?.image_url
-    ? `http://localhost:5000${currentUser.image_url}`
+    ? `${process.env.REACT_APP_API_BASE_URL}${currentUser.image_url}`
     : null;
 
   return (
