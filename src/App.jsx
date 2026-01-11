@@ -11,6 +11,7 @@ import MapDashboard from './routes/MapDashboard';
 import RegisterRoute from './routes/RegisterRoute'; // ✅ Import the RegisterRoute
 import ProfilePage from './routes/ProfilePage';
 import NotificationsPage from './routes/NotificationsPage';
+import AdminDashboard from './routes/AdminDashboard';
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/user/dashboard" element={<UserDashboard />} />
         <Route path="/seeker/dashboard" element={<SeekerDashboard />} />
         <Route path="/map" element={<MapDashboard />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
     </>
   );
