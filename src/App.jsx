@@ -30,6 +30,7 @@ function App() {
         <Route path="/seeker/dashboard" element={<SeekerDashboard />} />
         <Route path="/map" element={<MapDashboard />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </>
   );
